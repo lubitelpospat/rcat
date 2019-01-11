@@ -1,13 +1,13 @@
 from telegram.ext import Updater, CommandHandler
 import requests
-
+# dogs library: https://dog.ceo/api/breeds/image/random
 
 def get_cat_url():
      r = requests.get('http://aws.random.cat/meow').json()
      return r['file']
 
 def get_dog_url():
-     r = requests.get('https://dog.ceo/api/breeds/image/random').json()
+     r = requests.get('https://random.dog/woof.json').json()
      return r['message']
 
 def drop_cat(bot, update):
