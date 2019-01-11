@@ -8,7 +8,7 @@ def get_cat_url():
 
 def get_dog_url():
      r = requests.get('https://random.dog/woof.json').json()
-     return r['message']
+     return r['url']
 
 def drop_cat(bot, update):
     url = get_cat_url()
